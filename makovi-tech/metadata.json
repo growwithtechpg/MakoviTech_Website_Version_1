@@ -1,0 +1,8 @@
+{
+  "name": "Makovi Tech - Industrial Wire Mesh Manufacturer",
+  "description": "Makovi Tech manufactures and supplies industrial wire mesh products, extruder screens, filters, round cut circles, spin pack filters and filter packs for multiple industrial applications.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

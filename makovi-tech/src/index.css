@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-slate-950: #090e17;
+    --color-slate-900: #0f172a;
+    --color-slate-800: #1e293b;
+    --color-slate-700: #334155;
+    --color-slate-400: #94a3b8;
+    --color-slate-200: #e2e8f0;
+    --color-slate-50: #f8fafc;
+    --color-accent-blue: #0284c7;
+    --color-accent-deep: #0369a1;
+  }
+
+  body {
+    background-color: #e0f2fe;
+    color: #0f172a;
+    font-family: 'Public Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  .font-mono, .font-code {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #d0e8f8;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #7dd3fc;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #38bdf8;
+  }
+}
+
+/* Subtle engineering wire mesh grid backgrounds */
+.bg-mesh-grid-dark {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-mesh-grid-light {
+  background-image: 
+    linear-gradient(to right, rgba(2, 132, 199, 0.09) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(2, 132, 199, 0.09) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Infinite moving marquee slider */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 40s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll-reverse 45s linear infinite;
+}
+
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
